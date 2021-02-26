@@ -1,4 +1,4 @@
-package mocks;
+package api.mocks;
 
 public class Courses {
     public static String mockCourses(){

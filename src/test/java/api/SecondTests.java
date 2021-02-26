@@ -1,15 +1,15 @@
-import io.restassured.internal.mapping.GsonMapper;
-import io.restassured.path.json.JsonPath;
-import mocks.Courses;
-import org.junit.Assert;
-import org.junit.Test;
+package api;
 
-import java.util.stream.Collectors;
+import api.mocks.Courses;
+import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class SecondTests {
 
     @Test
     public void testWithMocks(){
+
         JsonPath js = new JsonPath(Courses.mockCourses());
 
         int count = js.getInt("courses.size()");
@@ -42,6 +42,9 @@ public class SecondTests {
             totalPrice += js.getInt("courses["+i+"].price") * js.getInt("courses["+i+"].copies");
         }
         Assert.assertEquals(totalAmount,totalPrice);
+    }
+
+    public static class BooksTest {
     }
 }
 

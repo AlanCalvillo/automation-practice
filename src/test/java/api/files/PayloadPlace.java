@@ -1,6 +1,6 @@
-package files;
+package api.files;
 
-public class Payload {
+public class PayloadPlace {
     public static String addPlace() {
         return "{\n" +
                 "    \"location\": {\n" +
@@ -39,4 +39,5 @@ public class Payload {
                 "    \"place_id\": \"%s\"\n" +
                 "}",placeId);
     }
+
 }
